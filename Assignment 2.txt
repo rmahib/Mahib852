@@ -1,0 +1,56 @@
+Select an organism and download its corresponding GFF file.
+
+Investigate this file with command line UNIX tools.
+
+Find answers to the following questions:
+
+Tell us a bit about the organism.
+How many features does the file contain?
+How many sequence regions (chromosomes) does the file contain? 
+How many genes are listed for this organism?
+What are the top-ten most annotated feature types (column 3) across the genome?
+Having analyzed this GFF file, does it seem like a complete and well-annotated organism?
+Share any other insights you might note.
+
+Create a text file that shows both how you downloaded the data and how you generated each of your results.
+
+1. I've selected a organism named Nannospalax galili, it is also commonly known as the upper Galilee blind mole rat. It belongs to the Spalacidae family. They are known for unique physiological and morphological trait as they survive in low oxygen environment. They use touch and vibration to navigate as they are blind.
+
+wget https://ftp.ensembl.org/pub/current_gff3/nannospalax_galili/Nannospalax_galili.S.galili_v1.0.112.gff3.gz
+
+I've used the above command to download the file as wget allows us to download directory content.
+
+2.The total number of feature of this organism is 988215. The command I use to generate this data is 
+zgrep -v "^#" Nannospalax_galili.S.galili_v1.0.112.gff3.gz | wc -l
+
+where grep -v "^#" removes comment lines start with # as they don't represent features and wc -l represent the remaining lines each corresponds to a feature.
+
+3.The organism contains 154975 sequence regions. I've used the following commands to get this data
+
+zgrep "##sequence-region" Nannospalax_galili.S.galili_v1.0.112.gff3.gz | wc -l
+
+grep "##sequence-region" this commands finds line with sequence ##region-directive, which indicates chromosome and wc -l counts such number of lines.  
+
+4. There 57497 genes are listed for the organism. I've used the below command to generate this:
+zgrep -w "gene" Nannospalax_galili.S.galili_v1.0.112.gff3.gz | wc -l
+
+grep -w "gene" finds lines where genes appear in the third column which corresponds to the gene feature in GFF3 file and wc -l do the same job.
+
+5. It has 298499 exons
+          26872 mRNA
+          17719 five_prime_UTR
+          14741 three_prime_UTR
+          162234 regions
+          5623 ncRNA_gene
+          282550 CDS
+The large number of Exons and CDS annotations suggests that the coding region of the genome is well characterized. However, it has also have a number of ncRNA which indicates that it might be under annotated. It also does have some general biological regions. Considering everything it could be said the organism is well annotated but might under annotated in some regions.
+
+I've used the following commands to answer this 
+zcat Nannospalax_galili.S.galili_v1.0.112.gff3.gz | awk '$3 != "" {print $3}' | sort | uniq -c | sort -nr | head -10
+awk '$3 != "" {print $3}': Extracts the third column (which contains the feature type) from the GFF3 file.
+sort: Sorts the feature types alphabetically
+uniq -c: Counts the occurrences of each unique feature type
+sort -nr: Sorts the counts in reverse numerical order (most frequent first)
+head -10: Displays the top 10 most frequent feature types
+6. I've also run the following command zgrep -w "pseudogene" Nannospalax_galili.S.galili_v1.0.112.gff3.gz | wc -l to get the number psudogene.
+The presence of 649 pseudogenes suggests a history of gene duplication, possible evolutionary adaptation, and genomic complexity.
