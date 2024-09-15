@@ -4,26 +4,26 @@
 *Nannospalax galili*, also known as the Upper Galilee blind mole rat, belongs to the Spalacidae family. This species is well-known for its ability to survive in low oxygen environments. It is blind and uses touch and vibrations to navigate.
 
 ## GFF3 File Download
-The GFF3 file for this organism was downloaded using the following command:
+**The GFF3 file for this organism was downloaded using the following command:
 ```bash
 "wget https://ftp.ensembl.org/pub/current_gff3/nannospalax_galili/Nannospalax_galili.S.galili_v1.0.112.gff3.gz"
 #
-Total Number of Features
+**Total Number of Features
 ##
-The total number of features in this GFF3 file is 988,215. The following command was used to generate this number:
+**The total number of features in this GFF3 file is 988,215. The following command was used to generate this number:
 ###Code used to retrive the number of features 
 "zgrep -v "^#" Nannospalax_galili.S.galili_v1.0.112.gff3.gz | wc -l"
 #
-Number of Sequence Regions
-## The organism contains 154,975 sequence regions
+**Number of Sequence Regions
+**The organism contains 154,975 sequence regions
 ###Command used for this:
 "zgrep "##sequence-region" Nannospalax_galili.S.galili_v1.0.112.gff3.gz | wc -l"
-#Total Number of Genes
-##There are 57,497 genes listed for the organism
+**Total Number of Genes
+**There are 57,497 genes listed for the organism
 ###comand used to retrive this:
 "zgrep -w "gene" Nannospalax_galili.S.galili_v1.0.112.gff3.gz | wc -l"
-#Feature Breakdown
-##Below is a breakdown of the main annotated features for Nannospalax galili:
+*Feature Breakdown
+**Below is a breakdown of the main annotated features for Nannospalax galili:
 
 298,499 exons
 282,550 CDS (coding sequences)
@@ -34,9 +34,9 @@ Number of Sequence Regions
 5,623 ncRNA_gene
 ### Comand used for this
 "zcat Nannospalax_galili.S.galili_v1.0.112.gff3.gz | awk '$3 != "" {print $3}' | sort | uniq -c | sort -nr | head -10"
-### Features indication:
-The large number of Exons and CDS annotations suggests that the coding region of the genome is well characterized. However, it has also have a number of ncRNA which indicates that it might be under annotated. It also does have some general biological regions. Considering everything it could be said the organism is well annotated but might under annotated in some regions.
-#Pseudogenes
-##The organism contains 649 pseudogenes
-### command used for that
-"zgrep -w "pseudogene" Nannospalax_galili.S.galili_v1.0.112.gff3.gz" | wc -l
+**Features indication:
+#The large number of Exons and CDS annotations suggests that the coding region of the genome is well characterized. However, it has also have a number of ncRNA which indicates that it might be under annotated. It also does have some general biological regions. Considering everything it could be said the organism is well annotated but might under annotated in some regions.
+**Pseudogenes
+**The organism contains 649 pseudogenes
+#command used for that
+"zgrep -w "pseudogene" Nannospalax_galili.S.galili_v1.0.112.gff3.gz" | wc -l"
