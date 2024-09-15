@@ -33,6 +33,7 @@ Below is a breakdown of the main annotated features for Nannospalax galili:
 **Observation**
 
 The large number of Exons and CDS annotations suggests that the coding region of the genome is well characterized. However, it has also have a number of ncRNA which indicates that it might be under annotated. It also does have some general biological regions. Considering everything it could be said the organism is well annotated but might under annotated in some regions.
+
 **Pseudogenes**
 
 The organism contains 649 pseudogenes
@@ -40,19 +41,24 @@ The organism contains 649 pseudogenes
 **Command Used for downloading the file**
 
 `wget https://ftp.ensembl.org/pub/current_gff3/nannospalax_galili/Nannospalax_galili.S.galili_v1.0.112.gff3.gz`
+
 **Question 1**
 
 `zgrep -v "^#" Nannospalax_galili.S.galili_v1.0.112.gff3.gz | wc -l`
-** Question 2**
+
+**Question 2**
 
 `zgrep "##sequence-region" Nannospalax_galili.S.galili_v1.0.112.gff3.gz | wc -l`
+
 **Question 3**
 
 `zgrep -w "gene" Nannospalax_galili.S.galili_v1.0.112.gff3.gz | wc -l`
 **Question4**
 
+
 `zcat Nannospalax_galili.S.galili_v1.0.112.gff3.gz | awk '$3 != "" {print $3}' | sort | uniq -c | sort -nr | head -10`
-** Addtional Insight**
+
+**Psudogene**
 
 `zgrep -w "pseudogene" Nannospalax_galili.S.galili_v1.0.112.gff3.gz" | wc -l`
 
