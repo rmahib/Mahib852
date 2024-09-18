@@ -22,7 +22,7 @@ gunzip GCF_000027325.1_ASM2732v1_genomic.fna.gz
 gunzip GCF_000027325.1_ASM2732v1_genomic.gff.gz
 ```
 
-* Corresponding gff and fna file were downloaded in directory. The files were loaded in IGV and relevant screenshots were taken
+Corresponding gff and fna file were downloaded in directory. The files were loaded in IGV and relevant screenshots were taken
 
 **Command used for getting gene.gff and cds.gff**
 
@@ -69,7 +69,7 @@ NC_000908.2     .       intergenic_region       12039   12068   .       .       
 awk '$3 == "gene" && $9 ~ /biotype=protein_coding/ {match($9, /ID=[^;]*/, a); match($9, /Name=[^;]*/, b); print $1 ": " a[0] (b[0] ? "; " b[0] : "") "; biotype=protein_coding"}' mycoplasma_genes.gff3
 ```
 
-
+````
 NC_000908.2: ID=gene-MG_RS00005; Name=dnaN; biotype=protein_coding
 
 NC_000908.2: ID=gene-MG_RS00010; Name=MG_RS00010; biotype=protein_coding
@@ -89,11 +89,11 @@ NC_000908.2: ID=gene-MG_RS00040; Name=mnmE; biotype=protein_coding
 NC_000908.2: ID=gene-MG_RS00045; Name=MG_RS00045; biotype=protein_coding
 
 NC_000908.2: ID=gene-MG_RS00050; Name=MG_RS00050; biotype=protein_coding
-
+````
 
 **Number of genes**
 
---439
+439
 
 ```
 awk '$3 == "gene"' GCF_000027325.1_ASM2732v1_genomic.gff | wc -l
@@ -101,7 +101,7 @@ awk '$3 == "gene"' GCF_000027325.1_ASM2732v1_genomic.gff | wc -l
 
 **Number of CDS**
 
---10
+10
 
 ```
 awk '$3 == "CDS"' GCF_000027325.1_ASM2732v1_genomic.gff | wc -l
@@ -109,7 +109,7 @@ awk '$3 == "CDS"' GCF_000027325.1_ASM2732v1_genomic.gff | wc -l
 
 **Manual gff**
 
-* A manual gff was created and uploaded as a seperate track in IGV
+A manual gff was created and uploaded as a seperate track in IGV
 
 **Gene only gff**
 
@@ -117,6 +117,7 @@ awk '$3 == "CDS"' GCF_000027325.1_ASM2732v1_genomic.gff | wc -l
 awk '$3 == "gene"' mycoplasma_genes.gff3 | head -n 20
 ```
 
+````
 NC_000908.2     RefSeq  gene    686     1828    .       +       .       ID=gene-MG_RS00005;Dbxref=GeneID:88282116;Name=dnaN;gbkey=Gene;gene=dnaN;gene_biotype=protein_coding;locus_tag=MG_RS00005;old_locus_tag=MG_001
 
 NC_000908.2     RefSeq  gene    1828    2760    .       +       .       ID=gene-MG_RS00010;Dbxref=GeneID:88282117;Name=MG_RS00010;gbkey=Gene;gene_biotype=protein_coding;locus_tag=MG_RS00010;old_locus_tag=MG_002
@@ -136,7 +137,7 @@ NC_000908.2     RefSeq  gene    9923    11251   .       +       .       ID=gene-
 NC_000908.2     RefSeq  gene    11251   12039   .       +       .       ID=gene-MG_RS00045;Dbxref=GeneID:88282124;Name=MG_RS00045;gbkey=Gene;gene_biotype=protein_coding;locus_tag=MG_RS00045;old_locus_tag=MG_009
 
 NC_000908.2     RefSeq  gene    12068   12724   .       +       .       ID=gene-MG_RS00050;Dbxref=GeneID:88282125;Name=MG_RS00050;gbkey=Gene;gene_biotype=protein_coding;locus_tag=MG_RS00050;old_locus_tag=MG_010````
-
+````
 
 
 * The total number of genes were way more than the number of CDS.
