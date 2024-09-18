@@ -5,40 +5,48 @@ First I strated with the following approach. I decide to go with *Mycoplasma_gen
 **Command Used for Downloading the file**
 
 ```mkdir Mycoplasma_genitalium```
-
 ```cd Mycoplasma_genitalium```
 
 **Command used for downloading the corresponding gff and fna**
 
-```wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/027/325/GCF_000027325.1_ASM2732v1/GCF_000027325.1_ASM2732v1_genomic.fna.gz```
+```
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/027/325/GCF_000027325.1_ASM2732v1/GCF_000027325.1_ASM2732v1_genomic.fna.gz```
 
-```wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/027/325/GCF_000027325.1_ASM2732v1/GCF_000027325.1_ASM2732v1_genomic.gff.gz```
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/027/325/GCF_000027325.1_ASM2732v1/GCF_000027325.1_ASM2732v1_genomic.gff.gz```
+```
+```
+gunzip GCF_000027325.1_ASM2732v1_genomic.fna.gz
 
-```gunzip GCF_000027325.1_ASM2732v1_genomic.fna.gz```
-
-```gunzip GCF_000027325.1_ASM2732v1_genomic.gff.gz```
+gunzip GCF_000027325.1_ASM2732v1_genomic.gff.gz
+```
 
 * Corresponding gff and fna file were downloaded in directory. The files were loaded in IGV and relevant screenshots were taken
 
 **Command used for getting gene.gff and cds.gff**
 
 
-```cat GCF_000027325.1_ASM2732v1_genomic.gff | awk '$3 == "gene"' > mycoplasma_genes.gff```
+```
+cat GCF_000027325.1_ASM2732v1_genomic.gff | awk '$3 == "gene"' > mycoplasma_genes.gff
 
 
-```cat GCF_000027325.1_ASM2732v1_genomic.gff | awk '$3 == "CDS"' > mycoplasma_CDS.gff```
+cat GCF_000027325.1_ASM2732v1_genomic.gff | awk '$3 == "CDS"' > mycoplasma_CDS.gff
+```
 
 
-```head mycoplasma_genes.gff```
+```
+head mycoplasma_genes.gff
 
-```head mycoplasma_CDS.gff```
+head mycoplasma_CDS.gff
+```
 
 
 **Itergenic Region**
 
-```awk '{print $1"\t.\tintergenic_region\t"$2"\t"$3"\t.\t.\t.\tID=intergenic_"NR";Name=intergenic_region_"NR}' gene_intervals.bed > intergenic_regions.gff```
+```
+awk '{print $1"\t.\tintergenic_region\t"$2"\t"$3"\t.\t.\t.\tID=intergenic_"NR";Name=intergenic_region_"NR}' gene_intervals.bed > intergenic_regions.gff
 
-```cat intergenic_regions.gff```
+cat intergenic_regions.gff
+```
 
 NC_000908.2     .       intergenic_region       0       686     .       .       .       ID=intergenic_1;Name=intergenic_region_1
 
@@ -55,7 +63,9 @@ NC_000908.2     .       intergenic_region       12039   12068   .       .       
 
 **Genes protein_coding**
 
-```awk '$3 == "gene" && $9 ~ /biotype=protein_coding/ {match($9, /ID=[^;]*/, a); match($9, /Name=[^;]*/, b); print $1 ": " a[0] (b[0] ? "; " b[0] : "") "; biotype=protein_coding"}' mycoplasma_genes.gff3```
+```
+awk '$3 == "gene" && $9 ~ /biotype=protein_coding/ {match($9, /ID=[^;]*/, a); match($9, /Name=[^;]*/, b); print $1 ": " a[0] (b[0] ? "; " b[0] : "") "; biotype=protein_coding"}' mycoplasma_genes.gff3
+```
 
 
 NC_000908.2: ID=gene-MG_RS00005; Name=dnaN; biotype=protein_coding
@@ -83,13 +93,17 @@ NC_000908.2: ID=gene-MG_RS00050; Name=MG_RS00050; biotype=protein_coding
 
 --439
 
-```awk '$3 == "gene"' GCF_000027325.1_ASM2732v1_genomic.gff | wc -l```
+```
+awk '$3 == "gene"' GCF_000027325.1_ASM2732v1_genomic.gff | wc -l
+```
 
 *Number of CDS*
 
 --10
 
-```awk '$3 == "CDS"' GCF_000027325.1_ASM2732v1_genomic.gff | wc -l```
+```
+awk '$3 == "CDS"' GCF_000027325.1_ASM2732v1_genomic.gff | wc -l
+```
 
 **Manual gff**
 
@@ -97,7 +111,9 @@ NC_000908.2: ID=gene-MG_RS00050; Name=MG_RS00050; biotype=protein_coding
 
 **Gene only gff**
 
-```awk '$3 == "gene"' mycoplasma_genes.gff3 | head -n 20```
+```
+awk '$3 == "gene"' mycoplasma_genes.gff3 | head -n 20
+```
 
 NC_000908.2     RefSeq  gene    686     1828    .       +       .       ID=gene-MG_RS00005;Dbxref=GeneID:88282116;Name=dnaN;gbkey=Gene;gene=dnaN;gene_biotype=protein_coding;locus_tag=MG_RS00005;old_locus_tag=MG_001
 
