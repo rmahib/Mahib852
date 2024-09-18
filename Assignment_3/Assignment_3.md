@@ -49,7 +49,7 @@ awk '{print $1"\t.\tintergenic_region\t"$2"\t"$3"\t.\t.\t.\tID=intergenic_"NR";N
 
 cat intergenic_regions.gff
 ```
-
+````
 NC_000908.2     .       intergenic_region       0       686     .       .       .       ID=intergenic_1;Name=intergenic_region_1
 
 NC_000908.2     .       intergenic_region       2760    2845    .       .       .       ID=intergenic_2;Name=intergenic_region_2
@@ -61,7 +61,7 @@ NC_000908.2     .       intergenic_region       8547    8551    .       .       
 NC_000908.2     .       intergenic_region       9920    9923    .       .       .       ID=intergenic_5;Name=intergenic_region_5
 
 NC_000908.2     .       intergenic_region       12039   12068   .       .       .       ID=intergenic_6;Name=intergenic_region_6
-
+````
 
 **Genes protein_coding**
 
