@@ -99,7 +99,7 @@ NC_000908.2: ID=gene-MG_RS00050; Name=MG_RS00050; biotype=protein_coding
 awk '$3 == "gene"' GCF_000027325.1_ASM2732v1_genomic.gff | wc -l
 ```
 
-*Number of CDS*
+**Number of CDS**
 
 --10
 
@@ -156,5 +156,4 @@ NC_000908.2     RefSeq  gene    12068   12724   .       +       .       ID=gene-
 * By having the genomic coordinates and biotype (protein-coding), researchers can study the structural organization of the genome, track gene expression, and understand how these genes function within the organism’s biology
 
 
-* By using IGV I could see the gene was overlapping with the cds regi
-](<Assignment 3-2.png>)
+* By using IGV I could see the gene was overlapping with the cds region
