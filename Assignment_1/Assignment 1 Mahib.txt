@@ -1,0 +1,25 @@
+1. I've followed the instructions and installed the software's.
+2. I know I was successful as I could run the basic commands like samtools and also did "sudo apt-get update"
+3. I can run the samtools
+4. The version of samtool is 1.13 by running the command line samtools --version
+5. https://github.com/rmahib/Mahib852
+6. "watch command" This command runs a specified commands repeatedly and displays its output regularly and update in real time within a interval. By default it refreshes in every two minutes. This command is useful for monitoring in real time to track changes in the directory.  It can be used to achieve a condition and it can be run until then. If I want to achieve a certain condition combining watch with conditional commands to stop it once a condition is met will very useful.
+7. The -d flag in the watch command is used to highlight differences between successive outputs. "watch -d" command will show any differences between the current output and previous output in real-time. If a output consists of lot of changes it helps to track the changes in real time. For example I can monitor changes in the disk usages while downloading a software or installing it by running this command watch -d -n 5 df -h.
+8. We need to run the following commands "ls -lh" to make the ls command display file sizes in a human-readable format for example KB, MB
+9. We need to run "rm -i" to make the rm command ask for confirmation before removing a file.
+10. Here is the commands that I've used for making a nested directory: 
+
+Pwd
+Ls
+cd boo
+touch demo.txt
+mkdir demo
+mkdir demo 2
+touch d852.md
+mkdir demo3
+ls
+that's how I've created files in various directories 
+11. Considering my nested directory I will try to explain relative and absolute path. The absolute path is the full path to the file starting from the root directory. Whereas the relative path depends on my current working directory. It’s the path from where you I currently located to the file.
+Relative Path: ../demo2/d852.md
+Absolute path: /home/rmahib/boo/demo/demo2/d852.md
+12. This commands directly takes me to the home directory cd ~. touch ~ will create a file for me. ls ~ this commands let me know what are the list of files in the directory. cd . this command leads to the current directory . cd.. This command moves me up one level in the directory hierarchy and leads to the parent directory.
