@@ -4,8 +4,10 @@ First I strated with the following approach. I decide to go with *Mycoplasma_gen
 
 **Command Used for Downloading the file**
 
-```mkdir Mycoplasma_genitalium```
-```cd Mycoplasma_genitalium```
+```
+mkdir Mycoplasma_genitalium
+   cd Mycoplasma_genitalium
+```
 
 **Command used for downloading the corresponding gff and fna**
 
