@@ -4,7 +4,7 @@ Investigate this file with command line UNIX tools.
 
 Find answers to the following questions-
 
-Tell us a bit about the organism.
+Tell us a bit about the organism?
 How many features does the file contain?
 How many sequence regions (chromosomes) does the file contain? 
 How many genes are listed for this organism?
