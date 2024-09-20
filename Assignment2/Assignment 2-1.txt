@@ -2,7 +2,7 @@ Select an organism and download its corresponding GFF file.
 
 Investigate this file with command line UNIX tools.
 
-Find answers to the following questions:
+Find answers to the following questions-
 
 Tell us a bit about the organism.
 How many features does the file contain?
