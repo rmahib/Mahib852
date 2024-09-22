@@ -26,15 +26,15 @@ I've changed my script to run Martina's Data
 
 **Link for the modified script**
 
-https://github.com/rmahib/Mahib852/blob/main/Assignment_4/lupinus.sh
+https://github.com/rmahib/Mahib852/blob/main/Assignment_4/lupinus_1.sh
 
 I've found the following results while running the script with Martina's Data
 ````
 1. Exon: 200363
-2. mRNA: 419831
-3. Gene: 83616
-4. CDS: 419831
-5. rRNA:1041
+2. mRNA: 38258
+3. Gene: 41359
+4. CDS: 185358
+5. rRNA:35
 ````
 There are slight difference in number but the data is reproducible using the script and changing the variables
 
