@@ -29,13 +29,13 @@ I've changed my script to run Martina's Data
 https://github.com/rmahib/Mahib852/blob/main/Assignment_4/lupinus.sh
 
 I've found the following results while running the script with Martina's Data
-
+````
 1. Exon: 200363
 2. mRNA: 419831
 3. Gene: 83616
 4. CDS: 419831
 5. rRNA:1041
-
+````
 There are slight difference in number but the data is reproducible using the script and changing the variables
 
 # Sequence ontology
