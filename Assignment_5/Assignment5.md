@@ -87,3 +87,14 @@ Yeast: 180MB
 Drosophila: 2700 MB
 
 Human: 48000 MB
+
+**Script Link**
+
+````
+https://github.com/rmahib/Mahib852/blob/main/Assignment_5/alternative.sh
+
+````
+
+````
+https://github.com/rmahib/Mahib852/blob/main/Assignment_5/assignment.sh
+````
