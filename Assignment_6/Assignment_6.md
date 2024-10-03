@@ -2,7 +2,7 @@
 
 The data analyzed in this report comes from the Sequence Read Archive (SRA) under the accession number **SRR387901**. This dataset corresponds to a single-end sequencing run of *Saccharomyces cerevisiae* (yeast), generated as part of the study revealing pervasive translational control in meiosis and helps to illuminate the molecular basis of the broad restructuring of meiotic cells.
 
-The study, titled **"High-resolution view of the yeast meiotic program revealed by ribosome profiling"**, was conducted by **Brar GA, Yassour M, Friedman N, Regev A, Ingolia NT, Weissman JS** and published in **Science**. The research aimed to explore [describe the biological question or focus of the research], using high-throughput sequencing to investigate [specific analysis or hypothesis].
+The study, titled **"High-resolution view of the yeast meiotic program revealed by ribosome profiling"**, was conducted by **Brar GA, Yassour M, Friedman N, Regev A, Ingolia NT, Weissman JS** and published in **Science**.
 
 ## Results of the Analysis
 
