@@ -58,7 +58,7 @@ make trim
 ````
 make fastqc
 ````
-Workflow Steps
+**Workflow Steps**
 1. Downloading the Genome
 The genome is downloaded from the Ensembl FTP server. It is a compressed .gz file that is unzipped for further analysis. The downloaded file is placed in the genome_data directory, and its size and contents are reported.
 
@@ -78,3 +78,9 @@ FastQC is run on both the raw and trimmed reads to assess the quality at differe
 
 ## Conclusion
 The Makefile provides a streamlined and reproducible workflow for processing sequencing data. It automates the download, trimming, and quality control steps, reducing manual intervention and ensuring consistency. The use of variables in the Makefile makes it easy to adjust parameters such as the genome URL or SRA accession number for different datasets
+
+**Make file Link**
+
+````
+https://github.com/rmahib/Mahib852/blob/main/Assignment_7/makefile
+````
