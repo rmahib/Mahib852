@@ -104,4 +104,5 @@ Filtered BAM: 0 reads remained after filtering, indicating that no reads met the
 This analysis examined alignment statistics and applied quality and pairing filters to the BAM file. The results revealed that most reads in the original BAM file did not align or failed to meet the quality criteria after filtering. This report provides all required commands, outputs, and interpretations for each assignment question.
 
 **Makefile Link**
+
 https://github.com/rmahib/Mahib852/blob/main/Assignment_9/makefile
