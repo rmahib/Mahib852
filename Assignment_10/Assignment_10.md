@@ -110,7 +110,7 @@ The IGV analysis highlighted several instances of variant calling differences:
 - **Concordant Variants**: Many variants were consistently identified by both tools, showing high reliability.
 
 ## Conclusion
-This assignment involved a complete workflow from alignment to variant calling and validation. The comparison of `bcftools` and `freebayes` demonstrated differences in variant detection capabilities. Through IGV validation, we identified examples of both concordant and discordant variant calls. This analysis provides insights into the strengths and limitations of each variant caller, particularly in regions with high or low coverage.
+This work involved a complete workflow from alignment to variant calling and validation. The comparison of `bcftools` and `freebayes` demonstrated differences in variant detection capabilities. Through IGV validation, we identified examples of both concordant and discordant variant calls. This analysis provides insights into the strengths and limitations of each variant caller, particularly in regions with high or low coverage.
 
 ## References
 - Tools: `bcftools`, `freebayes`, `samtools`, IGV
