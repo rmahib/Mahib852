@@ -1,4 +1,4 @@
-# Variant Calling Assignment Report
+# Variant Calling
 
 ## Objective
 The objective of this assignment was to perform variant calling on SRA data aligned to a reference genome. We used the tools `bcftools` and `freebayes` for variant calling and validated the variants visually in IGV. This report includes:
