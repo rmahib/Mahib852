@@ -70,23 +70,36 @@ These files were analyzed to identify differences between the two tools.
 ### Variant Validation in IGV
 
 The following images illustrate the results of variant validation in IGV:
-1. **Chromosome V (Position 1-576,874)** 
+1. **Chromosome V (Position 1-576,874)**
+
+<img width="854" alt="Chromosome 5" src="https://github.com/user-attachments/assets/7b94422e-e534-4453-a55e-e2d215d436b1">
+
 
 Observations: Variants identified by both `bcftools` and `freebayes` align with the reference, with some discrepancies visible.
 
 2. **Chromosome X (Position 1-745,751)**
 
+<img width="848" alt="Chromosome 10" src="https://github.com/user-attachments/assets/5f03e776-e7a7-4341-909b-52b86ee3dad0">
+
+
 Observations: Both tools identified variants, but `freebayes` shows additional calls
 
 3. **Chromosome VII (Position 1-1,090,940)**
+
+<img width="851" alt="Chromosome 7" src="https://github.com/user-attachments/assets/703b334b-2da7-409f-8a3f-cb3518bd72eb">
+
 
 Observations: Some variants identified by `freebayes` do not match the consensus from `bcftools`, suggesting potential false positives
 
 4. **Chromosome IV (Position 1-1,531,933)**
 
+<img width="852" alt="Chromosome 4" src="https://github.com/user-attachments/assets/86abd419-48fe-4ffb-8ee8-455390a99a9e">
+
 Observations: Variants detected, but `freebayes` seems to have additional calls not corroborated by `bcftools`.
 
 5. **Chromosome III (Position 1-316,620)**
+
+<img width="843" alt="Chromosome 3" src="https://github.com/user-attachments/assets/4492365d-01a5-4d93-a06e-d957dbce4cd5">
 
 Observations: Minimal variants were found, indicating a high concordance in this region
 
