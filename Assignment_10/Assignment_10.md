@@ -75,8 +75,9 @@ The following images illustrate the results of variant validation in IGV:
 Observations: Variants identified by both `bcftools` and `freebayes` align with the reference, with some discrepancies visible.
 
 2. **Chromosome X (Position 1-745,751)**
+<img width="843" alt="Assignment10_2" src="https://github.com/user-attachments/assets/aad298a5-5635-4f43-baba-0dd758236b6c">
 
-Observations: Both tools identified variants, but `freebayes` shows additional calls
+Observations: Both tools identified variants, but `freebayes` shows additional calls 
 
 3. **Chromosome VII (Position 1-1,090,940)**
 
