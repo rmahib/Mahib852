@@ -1,10 +1,10 @@
 # Variables
-GENOME_URL := ftp://ftp.ensembl.org/pub/release-105/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
-SRA_ID := SRR062634  # High-coverage human genome dataset from 1000 Genomes Project
-GENOME_FILE := genome_data/Homo_sapiens.GRCh38.dna.primary_assembly.fa
-BAM_FILE := alignments/sample_sorted.bam
-BCFTOOLS_VCF := variants/sample_bcftools.vcf
-FREEBAYES_VCF := variants/sample_freebayes.vcf
+GENOME_URL := ftp://ftp.ensembl.org/pub/release-105/fasta/saccharomyces_cerevisiae/dna/Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz
+SRA_ID := SRR5078495
+GENOME_FILE := genome_data/Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa
+BAM_FILE := alignments/srr5078495_sorted.bam
+BCFTOOLS_VCF := variants/srr5078495_bcftools.vcf
+FREEBAYES_VCF := variants/srr5078495_freebayes.vcf
 
 # Tools
 BWA := bwa
@@ -22,7 +22,7 @@ usage:
 	@echo "  genome         - Download and unzip the reference genome"
 	@echo "  sra_data       - Download SRA data for analysis"
 	@echo "  index          - Index the reference genome"
-	@echo "  align          - Align SRA reads to the reference genome"
+	@echo "  align          - Align SRA reads to the reference genome (single-end)"
 	@echo "  call_bcftools  - Call variants using bcftools"
 	@echo "  call_freebayes - Call variants using freebayes"
 	@echo "  compare        - Compare results between bcftools and freebayes"
@@ -47,12 +47,12 @@ index: genome
 	@echo "Indexing the reference genome with BWA..."
 	$(BWA) index $(GENOME_FILE)
 
-# Align the SRA reads to the reference genome and sort the BAM files
+# Align the SRA reads to the reference genome and sort the BAM files (single-end)
 align: index sra_data
 	mkdir -p alignments
 	@echo "Aligning SRA reads to the reference genome..."
-	$(BWA) mem $(GENOME_FILE) sra_data/$(SRA_ID)_1.fastq sra_data/$(SRA_ID)_2.fastq | $(SAMTOOLS) view -Sb - > alignments/sample.bam
-	$(SAMTOOLS) sort alignments/sample.bam -o $(BAM_FILE)
+	$(BWA) mem $(GENOME_FILE) sra_data/$(SRA_ID)_1.fastq | $(SAMTOOLS) view -Sb - > alignments/srr5078495.bam
+	$(SAMTOOLS) sort alignments/srr5078495.bam -o $(BAM_FILE)
 	$(SAMTOOLS) index $(BAM_FILE)
 
 # Call variants using bcftools
