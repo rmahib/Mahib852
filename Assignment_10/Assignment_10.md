@@ -127,7 +127,6 @@ This work involved a complete workflow from alignment to variant calling and val
   - Moderate sequencing depth (`DP` values).
   - Focused on high-confidence SNP detection.
 
----
 
 ### FreeBayes
 - **Number of Variants**: SNPs and indels identified.
@@ -142,7 +141,6 @@ This work involved a complete workflow from alignment to variant calling and val
   - Detected more complex variants (e.g., indels).
   - Provides detailed allele frequency (`AF`), depth of coverage (`DP`), and alternate allele observations (`AO`).
 
----
 
 ## Comparison of Tools
 - **Shared Findings**:
