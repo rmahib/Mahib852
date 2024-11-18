@@ -112,6 +112,48 @@ The IGV analysis highlighted several instances of variant calling differences:
 ## Conclusion
 This work involved a complete workflow from alignment to variant calling and validation. The comparison of `bcftools` and `freebayes` demonstrated differences in variant detection capabilities. Through IGV validation, we identified examples of both concordant and discordant variant calls. This analysis provides insights into the strengths and limitations of each variant caller, particularly in regions with high or low coverage.
 
+## Some of the variants Analyzed
+
+### BCFtools
+- **Number of Variants**: SNPs identified on chromosomes `I` and `II`.
+- **Example Variant**:
+  - **Chromosome**: `I`
+  - **Position**: `96809`
+  - **Reference Allele**: `C`
+  - **Alternate Allele**: `T`
+  - **Genotype**: `1/1` (Homozygous alternate)
+  - **Quality Score**: `67.41`
+- **Additional Notes**:
+  - Moderate sequencing depth (`DP` values).
+  - Focused on high-confidence SNP detection.
+
+---
+
+### FreeBayes
+- **Number of Variants**: SNPs and indels identified.
+- **Example Variant**:
+  - **Chromosome**: `I`
+  - **Position**: `96809`
+  - **Reference Allele**: `CTGT`
+  - **Alternate Allele**: `TTGA` (Indel)
+  - **Genotype**: `1/1` (Homozygous alternate)
+  - **Quality Score**: `75.60`
+- **Additional Notes**:
+  - Detected more complex variants (e.g., indels).
+  - Provides detailed allele frequency (`AF`), depth of coverage (`DP`), and alternate allele observations (`AO`).
+
+---
+
+## Comparison of Tools
+- **Shared Findings**:
+  - Both tools identified SNPs at overlapping positions (e.g., `96809` and `163683`).
+- **Unique Findings**:
+  - FreeBayes detected additional complex indels not reported by BCFtools.
+- **Confidence**:
+  - High confidence for SNPs from both tools.
+  - Lower confidence in complex indels detected by FreeBayes.
+
+
 ## References
 - Tools: `bcftools`, `freebayes`, `samtools`, IGV
 - Reference Genome: *Saccharomyces cerevisiae* (Ensembl)
