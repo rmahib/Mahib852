@@ -123,31 +123,35 @@ The Makefile orchestrates the entire pipeline. Key targets include:
 The following screenshots illustrate the analysis results:
 1. **Variants by Chromosome**:
 
-   <img width="679" alt="Dec-1" src="https://github.com/user-attachments/assets/0aa38aff-2e97-4934-80de-1066de6e8c36">
+   <img width="683" alt="dec-5" src="https://github.com/user-attachments/assets/dbe49a96-61ab-4f52-b220-66ffa1c29fc2">
+
+
+2. **Coding Consequences**
+
+   <img width="644" alt="Dec-4" src="https://github.com/user-attachments/assets/839e0adf-bc9b-40b1-960a-03efbe06fcbe">
 
 
 
-3. **Coding Consequences**:
 
-   <img width="631" alt="Dec-2" src="https://github.com/user-attachments/assets/a5fbfd13-6e8a-4f54-960e-32e6435b0f23">
+3. **Consequence Types**:
+
+<img width="679" alt="Dec-3" src="https://github.com/user-attachments/assets/6dd051af-deaf-4591-a6ec-1f57a9c4b7cc">
+
+  
 
 
+4. **Variant Classes**:
 
-5. **Consequence Types**:
+   <img width="631" alt="Dec-2" src="https://github.com/user-attachments/assets/bd9c4012-d159-41bb-ab46-70d75699d51c">
 
-  <img width="679" alt="Dec-3" src="https://github.com/user-attachments/assets/64b4e2d3-3eef-4df4-a8bf-221316bb5281">
 
    
 
-7. **Variant Classes**:
+5. **Summary Statistics**:
 
-   <img width="644" alt="Dec-4" src="https://github.com/user-attachments/assets/05b42098-359f-425e-913e-da1bf9cf4f3f">
+   <img width="679" alt="Dec-1" src="https://github.com/user-attachments/assets/d67347f8-9529-4666-8650-d07e0fd7ac01">
 
    
-
-9. **Summary Statistics**:
-
-   <img width="683" alt="dec-5" src="https://github.com/user-attachments/assets/a6a8d5f5-847f-48d2-aa1f-db1c0624f937">
 
 
 ---
