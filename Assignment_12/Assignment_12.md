@@ -161,12 +161,6 @@ The results highlight the utility of combining multiple samples to identify gene
 
 ---
 
-## Recommendations for Future Work
-1. **Deeper Annotation**: Include additional VEP plugins or databases for more detailed variant characterization.
-2. **Functional Validation**: Prioritize missense variants and inframe insertions for experimental validation.
-3. **Data Expansion**: Incorporate more SRA samples to increase variant detection sensitivity.
-
----
 
 ## Running the Pipeline
 1. Clone the repository containing the `Makefile`, `design.csv`, and reference data.
