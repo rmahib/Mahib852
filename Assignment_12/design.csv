@@ -1,0 +1,7 @@
+sample_id,condition,library_layout,organism,experiment_type,sequencing_platform
+SRR5078495,A,single-end,Saccharomyces cerevisiae,RNA-Seq,Illumina
+SRR5078497,B,single-end,Saccharomyces cerevisiae,RNA-Seq,Illumina
+SRR5078499,C,single-end,Saccharomyces cerevisiae,RNA-Seq,Illumina
+
+
+
