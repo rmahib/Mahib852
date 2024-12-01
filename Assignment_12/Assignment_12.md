@@ -123,18 +123,32 @@ The Makefile orchestrates the entire pipeline. Key targets include:
 The following screenshots illustrate the analysis results:
 1. **Variants by Chromosome**:
 
+   <img width="679" alt="Dec-1" src="https://github.com/user-attachments/assets/0aa38aff-2e97-4934-80de-1066de6e8c36">
 
-2. **Coding Consequences**:
 
 
-3. **Consequence Types**:
+3. **Coding Consequences**:
+
+   <img width="631" alt="Dec-2" src="https://github.com/user-attachments/assets/a5fbfd13-6e8a-4f54-960e-32e6435b0f23">
+
+
+
+5. **Consequence Types**:
+
+  <img width="679" alt="Dec-3" src="https://github.com/user-attachments/assets/64b4e2d3-3eef-4df4-a8bf-221316bb5281">
+
    
 
-4. **Variant Classes**:
+7. **Variant Classes**:
+
+   <img width="644" alt="Dec-4" src="https://github.com/user-attachments/assets/05b42098-359f-425e-913e-da1bf9cf4f3f">
+
    
 
-5. **Summary Statistics**:
-   
+9. **Summary Statistics**:
+
+   <img width="683" alt="dec-5" src="https://github.com/user-attachments/assets/a6a8d5f5-847f-48d2-aa1f-db1c0624f937">
+
 
 ---
 
