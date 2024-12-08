@@ -1,0 +1,4 @@
+Sample_Name,SRA_Accession,Condition,Replicate
+T0_rep1,SRR19383418,T0,1
+T0_rep2,SRR19383417,T0,2
+T0_rep3,SRR19383416,T0,3
