@@ -99,6 +99,12 @@ Chromosome VIII Region
 Chromosome XI Region
 
 Chromosome VII Region
+<img width="842" alt="Assignment_13-9" src="https://github.com/user-attachments/assets/599e6987-968a-4c42-9dbf-097404038b5b">
+
+<img width="851" alt="Assignment 13_10" src="https://github.com/user-attachments/assets/02f9785b-1188-4507-bd70-862b88370398">
+
+<img width="850" alt="Assignment_13_11" src="https://github.com/user-attachments/assets/27702be2-6fb4-41f3-9264-02ebba9b4a00">
+
 
 3. Consistently Expressed Genes
 Consistently expressed genes across all samples were identified:
