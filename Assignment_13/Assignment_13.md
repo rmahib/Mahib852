@@ -78,7 +78,7 @@ Results
 The count matrix was generated successfully and contains read counts for all samples. A subset of the data is shown below:
 
 ````
-# Count Matrix Results
+## Count Matrix Results
 
 GeneID     SRR19383416 SRR19383417 SRR19383418
 YDL246C    2           8           4
@@ -99,6 +99,7 @@ Chromosome VIII Region
 Chromosome XI Region
 
 Chromosome VII Region
+
 <img width="842" alt="Assignment_13-9" src="https://github.com/user-attachments/assets/599e6987-968a-4c42-9dbf-097404038b5b">
 
 <img width="851" alt="Assignment 13_10" src="https://github.com/user-attachments/assets/02f9785b-1188-4507-bd70-862b88370398">
@@ -107,6 +108,7 @@ Chromosome VII Region
 
 
 3. Consistently Expressed Genes
+
 Consistently expressed genes across all samples were identified:
 ````
 GeneID     SRR19383416 SRR19383417 SRR19383418
@@ -117,17 +119,19 @@ YDR523C     60          84          28
 
 *Critical Observations*
 
-Coverage: The IGV screenshots confirm robust coverage for exonic regions, validating the RNA-Seq dataset's quality.
+## Coverage: 
 
-Gene Expression: 
+The IGV screenshots confirm robust coverage for exonic regions, validating the RNA-Seq dataset's quality.
+
+## Gene Expression: 
 
 The count matrix shows variability in gene expression across samples, with some genes exhibiting high expression levels, indicating active transcription.
 
-Consistency: 
+## Consistency: 
 
 Consistently expressed genes were observed across replicates, providing confidence in the experimental reproducibility.
 
 
-Discussion
+## Discussion
 
 This analysis demonstrates successful RNA-Seq data processing, from alignment to feature quantification and visualization. The results highlight gene expression patterns in Saccharomyces cerevisiae and provide insights into transcriptional activity.
