@@ -111,7 +111,7 @@ Each column represents the read counts from a specific replicate:
 - Variation between replicates appears minimal, indicating good experimental reproducibility.
 - The counts follow a descending pattern from Gene 1 to Gene 5, reflecting their relative expression levels.
 
-1. Count Matrix Summary
+## 1. Count Matrix Summary
 The count matrix was generated successfully and contains read counts for all samples. A subset of the data is shown below:
 
 ````
@@ -128,7 +128,7 @@ YDR542W    0           0           4
 YDR492W    964         1328        1033
 ````
 
-2. Visualization
+## 2. Visualization
 IGV confirmed the alignment of reads to the reference genome. Below are the screenshots of RNA-Seq data visualized on IGV:
 
 Chromosome VIII Region
@@ -144,7 +144,7 @@ Chromosome VII Region
 <img width="850" alt="Assignment_13_11" src="https://github.com/user-attachments/assets/27702be2-6fb4-41f3-9264-02ebba9b4a00">
 
 
-3. Consistently Expressed Genes
+## 3. Consistently Expressed Genes
 
 Consistently expressed genes across all samples were identified:
 ````
@@ -154,7 +154,7 @@ YDR523C     60          84          28
 ````
 
 
-*Critical Observations*
+### Critical Observations
 
 ## Coverage: 
 
