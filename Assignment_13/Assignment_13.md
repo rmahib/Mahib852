@@ -13,66 +13,6 @@ This report documents the RNA-Seq analysis performed on the Saccharomyces cerevi
 5. **Visualization**: IGV was employed to visually confirm the alignment of reads to the genome.
 6. **Data Analysis**: R was used for data normalization, identification of consistently expressed genes, and exploratory data analysis.
 
----
-
-## Methods
-
-### 1. Data Acquisition
-Three replicates from Saccharomyces cerevisiae were downloaded using `fasterq-dump`. A CSV file containing metadata about the samples was generated:
-```bash
-echo -e "sample,accession\nreplicate_1,SRR19383416\nreplicate_2,SRR19383417\nreplicate_3,SRR19383418" > design.csv
-```
-
-2. Genome Reference
-The reference genome and GTF file for Saccharomyces cerevisiae were downloaded from Ensembl:
-
-````
-wget ftp://ftp.ensembl.org/pub/release-105/fasta/saccharomyces_cerevisiae/dna/Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz
-wget ftp://ftp.ensembl.org/pub/release-105/gtf/saccharomyces_cerevisiae/Saccharomyces_cerevisiae.R64-1-1.105.gtf.gz
-gunzip *.gz
-````
-
-3. Alignment
-Reads were aligned to the reference genome using HISAT2:
-
-````
-hisat2 -x genome/scerevisiae_index -1 fastq/SRR19383416_1.fastq -2 fastq/SRR19383416_2.fastq -S alignments/SRR19383416.sam
-````
-
-This step was repeated for all replicates. SAM files were converted to sorted BAM files:
-
-````
-samtools sort -o alignments/sorted/SRR19383416_sorted.bam alignments/SRR19383416.sam
-````
-
-4. Quantification
-Gene-level counts were obtained using FeatureCounts:
-
-````
-featureCounts -a genome/Saccharomyces_cerevisiae.R64-1-1.105.gtf -o counts/gene_counts.txt alignments/sorted/*.bam
-````
-
-5. Visualization
-
-Aligned reads were visualized in IGV. Several regions of the genome were inspected to confirm the accuracy of RNA-Seq alignments. IGV screenshots are included in the results.
-
-6. Data Analysis
-
-````
-# Load count data
-count_data <- read.table("counts/gene_counts.txt", header = TRUE, row.names = 1)
-count_data <- count_data[, -c(1:5)] # Remove unnecessary columns
-
-# Normalize data
-normalized_data <- t(t(count_data) / colSums(count_data)) * 1e6
-
-# Identify consistently expressed genes
-consistent_data <- normalized_data[rowSums(normalized_data > 1) == ncol(normalized_data), ]
-
-# Save consistent genes
-write.table(consistent_data, "counts/consistent_genes.txt", sep = "\t", quote = FALSE)
-````
-
 ## Results
 ## Gene Expression Levels
 
