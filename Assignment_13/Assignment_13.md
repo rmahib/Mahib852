@@ -92,15 +92,15 @@ Each column represents the read counts from a specific replicate:
 
 ## Observations
 
-### Gene 1 (ID: 5836):
+## Gene 1 (ID: 5836):
 - Highest expression across all replicates.
 - Counts increase across replicates, suggesting a consistent trend.
 
-### Gene 2 (ID: 1909):
+## Gene 2 (ID: 1909):
 - Second-highest expression.
 - Counts are slightly more variable across replicates compared to Gene 1.
 
-### Gene 3 to Gene 5 (IDs: 6161, 2421, 2529):
+## Gene 3 to Gene 5 (IDs: 6161, 2421, 2529):
 - Lower expression levels compared to Gene 1 and Gene 2.
 - Counts remain consistent across replicates, suggesting stable expression.
 
