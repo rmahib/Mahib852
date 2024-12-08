@@ -74,6 +74,43 @@ write.table(consistent_data, "counts/consistent_genes.txt", sep = "\t", quote = 
 ````
 
 ## Results
+## Gene Expression Levels
+
+Each row corresponds to a gene.  
+Each column represents the read counts from a specific replicate:  
+**SRR19383416_sorted.bam**, **SRR19383417_sorted.bam**, **SRR19383418_sorted.bam**  
+
+| **Gene ID**       | **Replicate 1 (Counts)** | **Replicate 2 (Counts)** | **Replicate 3 (Counts)** |
+|--------------------|--------------------------|--------------------------|--------------------------|
+| **Gene 1 (5836)** | 796,955                  | 842,071                  | 921,303                  |
+| **Gene 2 (1909)** | 569,941                  | 690,080                  | 647,602                  |
+| **Gene 3 (6161)** | 442,479                  | 557,638                  | 513,660                  |
+| **Gene 4 (2421)** | 415,645                  | 509,213                  | 473,398                  |
+| **Gene 5 (2529)** | 277,252                  | 353,533                  | 305,020                  |
+
+---
+
+## Observations
+
+### Gene 1 (ID: 5836):
+- Highest expression across all replicates.
+- Counts increase across replicates, suggesting a consistent trend.
+
+### Gene 2 (ID: 1909):
+- Second-highest expression.
+- Counts are slightly more variable across replicates compared to Gene 1.
+
+### Gene 3 to Gene 5 (IDs: 6161, 2421, 2529):
+- Lower expression levels compared to Gene 1 and Gene 2.
+- Counts remain consistent across replicates, suggesting stable expression.
+
+---
+
+## Insights
+- Genes with consistently high counts (e.g., 5836 and 1909) could represent highly expressed or functionally important genes in your dataset.
+- Variation between replicates appears minimal, indicating good experimental reproducibility.
+- The counts follow a descending pattern from Gene 1 to Gene 5, reflecting their relative expression levels.
+
 1. Count Matrix Summary
 The count matrix was generated successfully and contains read counts for all samples. A subset of the data is shown below:
 
