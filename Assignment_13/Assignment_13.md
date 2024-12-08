@@ -73,7 +73,7 @@ consistent_data <- normalized_data[rowSums(normalized_data > 1) == ncol(normaliz
 write.table(consistent_data, "counts/consistent_genes.txt", sep = "\t", quote = FALSE)
 ````
 
-Results
+## Results
 1. Count Matrix Summary
 The count matrix was generated successfully and contains read counts for all samples. A subset of the data is shown below:
 
