@@ -30,6 +30,9 @@ Each column represents the read counts from a specific replicate:
 
 ---
 
+<img width="500" alt="13-12" src="https://github.com/user-attachments/assets/9081c1f1-b992-4bba-8c5c-b177cbe18c7d">
+
+
 ## Observations
 
 ## Gene 1 (ID: 5836):
