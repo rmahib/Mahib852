@@ -39,8 +39,6 @@ A total of **50 significant genes** were identified. Here are some notable examp
 
 These genes represent a mixture of upregulated and downregulated patterns between the control and treated conditions.
 
-**Saved results**:
-- Significant genes list: `results/significant_genes.txt`
 
 ---
 
@@ -50,13 +48,14 @@ These genes represent a mixture of upregulated and downregulated patterns betwee
 The heatmap shows the expression profiles of the top 50 differentially expressed genes. Control samples cluster together, while treated samples form a distinct cluster. This supports the simulated conditions and highlights genes with significant expression changes.
 
 **Figure: Heatmap of Top 50 Genes**
-![Heatmap](Heatmap.png)
+![Heatmap](https://github.com/user-attachments/assets/e0a50834-78cb-469d-9370-115ca3f35684)
 
 #### **Principal Component Analysis (PCA)**
 The PCA plot shows a clear separation between control and treated samples along the first principal component (PC1), which explains the majority of variance in the dataset. This indicates that the simulated treated condition is well-separated from the controls.
 
 **Figure: PCA Plot**
-![PCA Plot](PCA_plot.png)
+![PCA_plot](https://github.com/user-attachments/assets/8a65c2bd-ebd3-4a66-ba82-cfc34005f88d)
+
 
 #### **Volcano Plot**
 The volcano plot visualizes all genes based on their log2 fold change and statistical significance (adjusted p-value). Red dots represent genes that meet the significance thresholds:
@@ -67,8 +66,9 @@ The plot shows that:
 1. Most genes cluster around no change (Log2FC ≈ 0), as expected.
 2. Significant genes are distributed across the upregulated and downregulated quadrants.
 
-**Figure: Volcano Plot**
-![Volcano Plot](volcano_plot.png)
+**Figure: Volcano Plot** (From Assignment _13)
+![volcano_plot](https://github.com/user-attachments/assets/4c56a1c2-02ce-4edf-bb69-056ca04eb913)
+
 
 ---
 
@@ -103,8 +103,3 @@ While this analysis demonstrates the workflow, further validation with real expe
 
 ---
 
-## **File Outputs**
-1. Significant genes: `results/significant_genes.txt`
-2. Heatmap: `results/Heatmap.png`
-3. PCA Plot: `results/PCA_plot.png`
-4. Volcano Plot: `results/volcano_plot.png`
